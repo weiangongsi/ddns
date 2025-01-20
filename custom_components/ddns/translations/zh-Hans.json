@@ -1,0 +1,58 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "域名已经设置"
+        },
+        "error": {
+            "not_support_tencent": "由于我没有腾讯域名所以没有开发,如果你需要腾讯动态域名解析请联系我",
+            "invalid_params": "参数错误",
+            "NotFindAIp": "获取IPv4地址失败",
+            "NotFindAAAAIp": "获取IPv6地址失败",
+            "InvalidAccessKeyId.NotFound": "access_key_id错误",
+            "SignatureDoesNotMatch": "access_key_secret错误",
+            "InvalidDomainName.Format": "域名错误",
+            "InvalidDomainName.NoExist": "未查询到该域名,请检查是否有误"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "dns_server": "请选择域名服务商"
+                },
+                "title": "DDNS"
+            },
+            "ali": {
+                "data": {
+                    "access_key_id": "access_key_id",
+                    "access_key_secret": "access_key_secret",
+                    "dns_type": "记录类型",
+                    "rr": "请填写域名前缀,支持多级如: ab.c",
+                    "domain_name": "请填写域名,如:aliyun.com"
+                },
+                "title": "添加动态解析记录",
+                "description": "请填写表单"
+            }
+        }
+    },
+    "options": {
+        "abort": {
+            "already_configured": "域名已经设置"
+        },
+        "error": {
+            "invalid": "错误"
+        }
+    },
+    "selector": {
+        "dns_server": {
+            "options": {
+                "Ali": "阿里巴巴",
+                "Tencent": "腾讯"
+            }
+        },
+        "dns_type": {
+            "options": {
+                "A": "A,将域名指向一个IPv4地址",
+                "AAAA": "AAAA,将域名指向一个IPv6地址"
+            }
+        }
+    }
+}

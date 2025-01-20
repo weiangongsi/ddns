@@ -1,0 +1,17 @@
+{
+  "domain": "ddns",
+  "name": "DDNS",
+  "codeowners": [
+    "@weiangongsi"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/weiangongsi/ddns.git",
+  "issue_tracker": "https://github.com/weiangongsi/ddns/issues",
+  "iot_class": "cloud_push",
+  "requirements": [
+    "aiodns==3.2.0",
+    "alibabacloud_alidns20150109==3.5.6"
+  ],
+  "import_executor": false,
+  "version": "1.0.0"
+}

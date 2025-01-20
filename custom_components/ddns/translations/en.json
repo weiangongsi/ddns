@@ -1,0 +1,58 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "domian is already configured"
+        },
+        "error": {
+            "not_support_tencent": "please let me know if you need this feature",
+            "invalid_params": "invalid params",
+            "NotFindAIp": "Failed to Obtain IPv4 Address",
+            "NotFindAAAAIp": "Failed to Obtain IPv6 Address",
+            "InvalidAccessKeyId.NotFound": "Specified access key is not found",
+            "SignatureDoesNotMatch": "Specified signature does not match our calculation",
+            "InvalidDomainName.Format": "Invalid domain name",
+            "InvalidDomainName.NoExist": "The specified domain name does not exist"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "dns_server": "DNS SERVER"
+                },
+                "title": "DDNS"
+            },
+            "ali": {
+                "data": {
+                    "access_key_id": "access_key_id",
+                    "access_key_secret": "access_key_secret",
+                    "dns_type": "Record Type",
+                    "rr": "Specify a prefix for the domain name,eg:ab or ab.c...",
+                    "domain_name": "domain name,eg:aliyun.com"
+                },
+                "title": "fill out the form",
+                "description": "add ddns record"
+            }
+        }
+    },
+    "options": {
+        "abort": {
+            "already_configured": "domian is already configured"
+        },
+        "error": {
+            "invalid": "Invalid"
+        }
+    },
+    "selector": {
+        "dns_server": {
+            "options": {
+                "Ali": "Alibaba",
+                "Tencent": "Tencent"
+            }
+        },
+        "dns_type": {
+            "options": {
+                "A": "A,Points a domain name to an IPv4 address.",
+                "AAAA": "AAAA,Points a domain name to an IPv6 address."
+            }
+        }
+    }
+}
