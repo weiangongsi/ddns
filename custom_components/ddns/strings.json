@@ -32,6 +32,14 @@
       }
     }
   },
+  "options": {
+    "abort": {
+      "already_configured": "domian is already configured"
+    },
+    "error": {
+      "invalid": "Invalid"
+    }
+  },
   "selector": {
     "dns_server": {
       "options": {

@@ -39,7 +39,8 @@
         },
         "error": {
             "invalid": "Invalid"
-        }
+        },
+        "step": {}
     },
     "selector": {
         "dns_server": {
