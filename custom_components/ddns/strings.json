@@ -35,14 +35,14 @@
   "selector": {
     "dns_server": {
       "options": {
-        "Ali": "Alibaba",
-        "Tencent": "Tencent"
+        "ali": "Alibaba",
+        "tencent": "Tencent"
       }
     },
     "dns_type": {
       "options": {
-        "A": "A,Points a domain name to an IPv4 address.",
-        "AAAA": "AAAA,Points a domain name to an IPv6 address."
+        "a": "A,Points a domain name to an IPv4 address.",
+        "aaaa": "AAAA,Points a domain name to an IPv6 address."
       }
     }
   }

@@ -27,6 +27,7 @@ from .const import (
     CONF_DNS_SERVER_ALI,
     DNS_HOSTNAME,
     DNS_IPV4_TYPE,
+    DNS_IPV6_TYPE,
     DNS_PORT,
     DNS_RESOLVER,
     DNS_RESOLVER_IPV6,
@@ -44,7 +45,7 @@ SCAN_INTERVAL = timedelta(seconds=60)
 def sort_ips(ips: list, querytype: str) -> list:
     """Join IPs into a single string."""
 
-    if querytype == "AAAA":
+    if querytype.lower() == DNS_IPV6_TYPE.lower():
         ips = [IPv6Address(ip) for ip in ips]
     else:
         ips = [IPv4Address(ip) for ip in ips]
@@ -115,15 +116,15 @@ class AliDdns(SensorEntity):
             config = open_api_models.Config(
                 access_key_id=access_key_id, access_key_secret=access_key_secret
             )
-            config.endpoint = f"alidns.cn-hangzhou.aliyuncs.com"
+            config.endpoint = "alidns.cn-hangzhou.aliyuncs.com"
             self.aliDnsClient = AlidnsClient(config)
-        self.dns_type = dns_type
+        self.dns_type = dns_type.upper()
         self.rr = rr
         self.domain_name = domain_name
         self._attr_extra_state_attributes = {
             "domain": name,
             "resolver": DNS_RESOLVER,
-            "type": dns_type,
+            "type": self.dns_type,
         }
         self._attr_device_info = DeviceInfo(
             entry_type=DeviceEntryType.SERVICE,

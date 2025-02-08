@@ -86,7 +86,7 @@ async def async_validate_ali(
             result = bool(
                 await aiodns.DNSResolver(
                     nameservers=[dns_resolver], tcp_port=DNS_PORT, udp_port=DNS_PORT
-                ).query(host=DNS_HOSTNAME, qtype=dns_type)
+                ).query(host=DNS_HOSTNAME, qtype=dns_type.upper())
             )
         return result
 
@@ -107,7 +107,7 @@ async def async_validate_ali(
             client = AlidnsClient(config)
             request = alidns_models.DescribeSubDomainRecordsRequest()
             request.sub_domain = rr + "." + domain_name
-            request.type = dns_type
+            request.type = dns_type.upper()
             await client.describe_sub_domain_records_async(request)
         except TeaException as e:
             return e.code

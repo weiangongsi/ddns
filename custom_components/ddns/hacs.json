@@ -1,0 +1,6 @@
+{
+    "name": "ddns",
+    "render_readme": true,
+    "country": "CN",
+    "homeassistant": "2025.2.0"
+}
