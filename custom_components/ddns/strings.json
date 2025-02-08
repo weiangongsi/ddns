@@ -33,6 +33,7 @@
     }
   },
   "options": {
+    "step": {},
     "abort": {
       "already_configured": "domian is already configured"
     },
