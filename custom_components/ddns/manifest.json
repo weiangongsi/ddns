@@ -9,7 +9,7 @@
   "iot_class": "cloud_push",
   "issue_tracker": "https://github.com/weiangongsi/ddns/issues",
   "requirements": [
-    "aiodns==3.2.0",
+    "aiodns==3.3.0",
     "alibabacloud_alidns20150109==3.5.6"
   ],
   "version": "1.0.0"
