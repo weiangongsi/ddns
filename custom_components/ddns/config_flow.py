@@ -83,10 +83,9 @@ async def async_validate_ali(
             dns_resolver = (
                 DNS_RESOLVER if dns_type == DNS_IPV4_TYPE else DNS_RESOLVER_IPV6
             )
+            _resolver = aiodns.DNSResolver(nameservers=[dns_resolver], udp_port=DNS_PORT, tcp_port=DNS_PORT)
             result = bool(
-                await aiodns.DNSResolver(
-                    nameservers=[dns_resolver], tcp_port=DNS_PORT, udp_port=DNS_PORT
-                ).query(host=DNS_HOSTNAME, qtype=dns_type.upper())
+                await _resolver.query(host=DNS_HOSTNAME, qtype=dns_type.upper())
             )
         return result
 
