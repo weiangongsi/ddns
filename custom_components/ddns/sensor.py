@@ -141,6 +141,7 @@ class AliDdns(SensorEntity):
             response = await self.resolver.query(host=DNS_HOSTNAME, qtype=self.dns_type)
         except DNSError as err:
             _LOGGER.warning("Exception while resolving host: %s", err)
+            self.resolver.cancel()
             response = None
         if response:
             sorted_ips = sort_ips(
