@@ -4,7 +4,6 @@
       "already_configured": "domian is already configured"
     },
     "error": {
-      "not_support_tencent": "please let me know if you need this feature",
       "invalid_params": "invalid params",
       "NotFindAIp": "Failed to Obtain IPv4 Address",
       "NotFindAAAAIp": "Failed to Obtain IPv6 Address",
@@ -23,6 +22,17 @@
         "data": {
           "access_key_id": "access_key_id",
           "access_key_secret": "access_key_secret",
+          "dns_type": "Record Type",
+          "rr": "Specify a prefix for the domain name,eg:ab or ab.c...",
+          "domain_name": "domain name,eg:aliyun.com"
+        },
+        "title": "fill out the form",
+        "description": "add ddns record"
+      },
+      "tencent": {
+        "data": {
+          "secret_id": "secret_id",
+          "secret_key": "secret_key",
           "dns_type": "Record Type",
           "rr": "Specify a prefix for the domain name,eg:ab or ab.c...",
           "domain_name": "domain name,eg:aliyun.com"

@@ -12,3 +12,7 @@
     2. 重启 Home Assistant 服务。
     3. 在 Home Assistant 的集成页面，搜索 "ddns" 并添加。
     4. 第一次添加组件由于安装阿里云依赖库比较慢，请耐心等待，然后根据提示填写表单。
+
+## ipv6
+
+如果是docker部署的，注意开启docker服务支持ipv6，容器支持ipv6

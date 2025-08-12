@@ -9,7 +9,9 @@
   "iot_class": "cloud_push",
   "issue_tracker": "https://github.com/weiangongsi/ddns/issues",
   "requirements": [
-    "alibabacloud_alidns20150109==3.5.6"
+    "alibabacloud_alidns20150109==3.5.6",
+    "tencentcloud-sdk-python-common==3.0.1442",
+    "tencentcloud-sdk-python-dnspod==3.0.1430"
   ],
-  "version": "1.0.0"
+  "version": "1.1.0"
 }
